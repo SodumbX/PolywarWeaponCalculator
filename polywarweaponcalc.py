@@ -51,7 +51,7 @@ while go==("yes"):
     #Calculates predicted values
     trueacc=(acc+100-recoil+((-bkills-hkills-checkcheck)*10))-(firer*2)*2
     truetkill=(tbkill+tbkillm+thkill+thkillm+thbkill)/5
-    trueweapon=((trueacc*1.4)+(dps/30)+(mag/5)+(mob/10)-(truetkill*1000)+1000)
+    trueweapon=((trueacc*1.4)+(dps/30)+(mag/5)+(mob/10)-(truetkill*1500)+800)
     value=(trueweapon+500-((5000+price)/12))
 
     print(f"The {gun}'s damage per shot is {dmg}")
@@ -65,7 +65,7 @@ while go==("yes"):
     print(f"The {gun}'s DPS is {dps}")
     print(f"The {gun} takes {bkills} shots to kill with body shots")
     print(f"The {gun} takes {hkills} shots to kill with head shots")
-    print(f"The {gun} takes {checkcheck} shots to kill with alternating body and head shots")
+    print(f"The {gun} takes {checkcheck} shots to kill with alternating head and body shots")
     print(f"The {gun} takes {tbkill}s to kill with body shots")
     print(f"The {gun} takes {tbkillm}s to kill with body shots after missing the first shot")
     print(f"The {gun} takes {thkill}s to kill with head shots")
@@ -75,7 +75,6 @@ while go==("yes"):
     print(f"The {gun}'s True Accuracy Score is {trueacc}")
     print(f"The {gun}'s True Weapon Score is {trueweapon}")
     print(f"The {gun}'s True Value Score is {value}")
-
 
 
     
