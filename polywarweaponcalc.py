@@ -36,6 +36,9 @@ while go==("yes"):
     dps=dmg*fire
     acc=float(racc)
     recoil=float(rrecoil)
+    trecoil=recoil
+    if recoil > 15:
+        trecoil=15
     mag=float(rmag)
     mob=float(rmag)
     price=float(rprice)
@@ -49,7 +52,7 @@ while go==("yes"):
     thbkill=checkcheck*firer
 
     #Calculates predicted values
-    trueacc=(acc+100-recoil+((-bkills-hkills-checkcheck)*10))-(firer*2)*2
+    trueacc=(acc+100-trecoil+((-bkills-hkills-checkcheck)*10))-(firer*2)*2
     truetkill=(tbkill+tbkillm+thkill+thkillm+thbkill)/5
     trueweapon=((trueacc*1.4)+(dps/30)+(mag/5)+(mob/10)-(truetkill*1500)+800)
     value=(trueweapon+500-((5000+price)/12))
@@ -75,6 +78,9 @@ while go==("yes"):
     print(f"The {gun}'s True Accuracy Score is {trueacc}")
     print(f"The {gun}'s True Weapon Score is {trueweapon}")
     print(f"The {gun}'s True Value Score is {value}")
+
+
+
 
 
     
